@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+$primary: #ff5e1e;
+$secondary: #f1f1f1;
+$line: #d76d3d;
+$text: #565656;
+$white: #fff;
+$black: #000000;
+
+$fontSize: 16px;
+$fontFamily: 'Caveat', cursive;
+
+$transition: all 0.3s ease;
+
+$padding: 64px 0;
+
+/* basic style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: $fontSize;
+  font-family: $fontFamily;
+  color: $black;
+  background: $secondary;
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+img {
+  width: 100%;
+}
+
+/* head */
+.header {
+  background: linear-gradient(rgba($text, 0.5), rgba($text, 0.5)),
+    url(img/header.jpg);
+  background-position: center;
+  background-size: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: $white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+  }
+  hr {
+    border: none;
+    height: 3px;
+    background-color: $line;
+    width: 15%;
+    margin: 15px auto 50px;
+  }
+  h1 {
+    color: $white;
+    font-size: 80px;
+  }
+}
+/* hero */
+section {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    article {
+      flex: 0 0 48%;
+      background: $white;
+      margin: 50px 0;
+      .slika {
+        // width: 500px;
+        // height: 400px;
+        overflow: hidden;
+      }
+      .tekst {
+        text-align: center;
+        p:first-child {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          padding-top: 40px;
+          color: $text;
+        }
+        hr {
+          border: none;
+          height: 2px;
+          background-color: $primary;
+          width: 30%;
+          margin: 15px auto 20px;
+        }
+        h2 {
+          font-size: 30px;
+        }
+        p {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          padding: 10px 20px;
+          color: $text;
+        }
+        button {
+          background: $primary;
+          color: $black;
+          border: none;
+          padding: 10px 30px;
+          margin: 20px auto;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-family: Arial, Helvetica, sans-serif;
+          cursor: pointer;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}
+/* baner */
+.baner {
+  background: linear-gradient(rgba($text, 0.3), rgba($text, 0.3)),
+    url(img/cta.jpg);
+  background-position: center;
+  background-size: auto;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: $white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+  }
+  hr {
+    border: none;
+    height: 3px;
+    background-color: $line;
+    width: 20%;
+    margin: 15px auto 10px;
+  }
+  h1 {
+    color: $white;
+    font-size: 80px;
+  }
+}
+/* galerija */
+.galerija {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px auto;
+    .gal-slika {
+      display: flex;
+      border: 10px solid $white;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      flex: 0 0 48%;
+      margin: 10px 0;
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+/* footer */
+footer {
+  .foobar {
+    background: $text;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .ikonice {
+      display: flex;
+      justify-content: center;
+      padding: 30px 0;
+      i {
+        color: $primary;
+        text-align: center;
+        font-size: 24px;
+        margin: 0 20px;
+        cursor: pointer;
+      }
+    }
+    .fooime {
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: $white;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+}
