@@ -13,6 +13,19 @@ $transition: all 0.3s ease;
 
 $padding: 64px 0;
 
+/* mixins */
+@mixin responsive($devices) {
+  @if $devices == mobile {
+    @media (max-width: 430px) {
+      @content;
+    }
+  }
+  @if $devices == tablet {
+    @media (min-width: 431px) and (max-width: 800px) {
+      @content;
+    }
+  }
+}
 /* basic style */
 * {
   margin: 0;
@@ -28,6 +41,12 @@ body {
 .container {
   max-width: 80%;
   margin: auto;
+  @include responsive(mobile) {
+    max-width: 95%;
+  }
+  @include responsive(tablet) {
+    max-width: 90%;
+  }
 }
 img {
   width: 100%;
@@ -48,6 +67,9 @@ img {
     color: $white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
+    @include responsive(mobile) {
+      font-size: 20px;
+    }
   }
   hr {
     border: none;
@@ -59,6 +81,10 @@ img {
   h1 {
     color: $white;
     font-size: 80px;
+    text-align: center;
+    @include responsive(mobile) {
+      font-size: 50px;
+    }
   }
 }
 /* hero */
@@ -130,6 +156,10 @@ section {
     color: $white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
+    text-align: center;
+    @include responsive(mobile) {
+      font-size: 16px;
+    }
   }
   hr {
     border: none;
@@ -141,6 +171,10 @@ section {
   h1 {
     color: $white;
     font-size: 80px;
+    text-align: center;
+    @include responsive(mobile) {
+      font-size: 50px;
+    }
   }
 }
 /* galerija */
